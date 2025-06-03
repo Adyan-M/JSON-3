@@ -45,8 +45,66 @@ document.addEventListener('DOMContentLoaded',function(){
         }
         showItem(index){
             this.items.forEach(item =>{
-                
-            })
+                item.classList.remove('active');
+                item.style.opacity = 0;
+            });
+            this.indicator.forEach(indicator => indicator.classlist.remove('active'));
+            this.items[index].classList.add('active');
+            setTimeout(() => {
+                this.items[index].style.opacity = 1;
+            }, 10);
+            this.indicators[index].classList.add('active');
+            this.currentIndex = index;       
+        }
+        next(){
+            const nextIndex = (this.currentIndex + 1) % this.totalItems;
+            this.showItem(nextIndex);
+            this.resetAutoPlay();
+        }
+        prev(){
+            const prevIndex = (this.currentIndex - 1 + totalItems) % this.totalItems;
+            this.showItem(prevIndex);
+            this.resetAutoPlay();
+        }
+        goTo(index){
+            this.showItem(index);
+            this.resetAutoPlay();
+        }
+        startAutoPlay(){
+            this.autoPlayInterval = setInterval(() => this.next(), this.autoPlayDelay);
+        }
+        stopAutoPlay(){
+            if (this.autoPlayInterval){
+                clearInterval(this.autoPlayInterval);
+                this.autoPlayInterval = null;
+            }
+        }
+        resetAutoPlay(){
+            this.stopAutoPlay();
+            this.startAutoPlay();
         }
     }
-})
+    document.querySelectorAll('.carousel').forEach(carousel =>{
+        new Carousel(carousel);
+    });
+    const style = document.createElement('style');
+    style.textContent = `
+    .carousel-item{
+      transition opacity 0.5s ease;
+      opacity 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .carousel-item.active{
+      position: relative;
+    }
+    .carousel-inner{
+      position: relative;
+      overflow: hidden;
+    }
+    `;
+    document.head.appendChild(style);
+});
