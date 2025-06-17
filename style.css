@@ -11,7 +11,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: rgb(43, 95, 43);
+        background-color: #027027;
         color: rgb(255, 255, 255);
         padding: 1rem 2rem;
     }
@@ -230,4 +230,13 @@
     background: white;
 }
 
+footer{
+    height: 50px;
+    width: 100%;
+    background-color: #027027;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 50px 0;
+    font-size: 20px;
 
+}
