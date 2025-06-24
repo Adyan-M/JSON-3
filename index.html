@@ -4,17 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adyan's Portfolio</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav class="navbar">
         <div class="logo">Adyan Muntasir</div>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="About.html">About</a></li>
-          <li><a href="projects.html">My Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li class="animate__animated animate__fadeIn animate__delay-1s">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="animate__animated animate__fadeIn animate__delay-2s">
+            <a href="About.html">About</a>
+          </li>
+          <li class="animate__animated animate__fadeIn animate__delay-3s">
+            <a href="projects.html">My Projects</a>
+          </li>
+          <li class="animate__animated animate__fadeIn animate__delay-4s">
+            <a href="gallery.html">Gallery</a>
+          </li>
         </ul>
         <div class="burger">
           <div class="line1"></div>
@@ -24,10 +48,25 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <!-- Hero Section -->
+
+      <section class="hero animate__animated animate__fadeIn">
+        <div class="shape shape-1"></div>
+
+        <div class="shape shape-2"></div>
+
         <div class="hero-content">
-          <h1>I am Adyan Muntasir</h1>
-          <p>I am a Gamer,Coder and a Learning Enthusiast</p>
+          <h1 class="animate__animated animate__fadeInDown">
+           Hi, I'm <span style="color: #947364">Adyan Muntasir</span>
+          </h1>
+
+          <h2 class="animate__animated animate__fadeInDown animate__delay-1s">
+           A Passionate Learner and Coding Enthusiast
+          </h2>
+
+          <p class="animate__animated animate__fadeIn animate__delay-2s">
+            I love gaming,and solve problems by coding.
+          </p>
         </div>
       </section>
       <section class="carousel-section">
@@ -76,32 +115,25 @@
         <h1>My Project</h1>
         <div class="cards">
           <div class="card">
-            <h2>Project 1</h2>
+            <h2>Germany Flag using Turtle</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vero
-              saepe perferendis voluptatem excepturi dignissimos vel, ducimus
-              temporibus in modi.
+             In the below link I made the flag of Germany using Turtle library.
             </p>
-            <button class="card-btn"><a href="#">Details</a></button>
+            <button class="card-btn"><a href="https://trinket.io/python/13fdaea74c75">Details</a></button>
           </div>
           <div class="card">
-            <h2>Project 2</h2>
+            <h2>Star using Turtle</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Reprehenderit, deserunt et. Repellat itaque voluptatem incidunt
-              obcaecati, facere ullam dolore consequatur laudantium quibusdam
-              molestiae?
+              A star with no crosses using Turtle library.
             </p>
-            <button class="card-btn"><a href="#">Details</a></button>
+            <button class="card-btn"><a href="https://trinket.io/python/141e2182f5e7">Details</a></button>
           </div>
           <div class="card">
-            <h2>Project 3</h2>
+            <h2>Demo Blogsite using Bootstrap Only.</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vero
-              saepe perferendis voluptatem excepturi dignissimos vel, ducimus
-              temporibus in modi.
+              The below link will take you to a Github repository you can copy the code if you want to. 
             </p>
-            <button class="card-btn"><a href="#">Details</a></button>
+            <button class="card-btn"><a href="https://github.com/Adyan-M/Bootstrap-Carousel-and-Scrollspy.git">Details</a></button>
           </div>
         </div>
       </div>
